@@ -1,0 +1,43 @@
+<view class="container">
+    <swiper class="swiper" indicator-dots autoplay circular interval="3200" duration="600">
+        <block wx:for="{{swiperArr}}">
+            <swiper-item>
+                <image src="{{item}}" mode="aspectFill" class="slide_image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="rfl_ex align_cen gowhere">
+        <input type="text" class="isinput" placeholder="出发地" />
+        <image class="left_right" mode="aspectFit" src="/images/left_right.png" />
+        <input type="text" class="isinput" placeholder="目的地" />
+    </view>
+
+    <view class="grid_title r_flex align_cen">
+        <view class="grid_titlel flex1">车主信息</view>
+        <view class="grid_titler">
+            <view class="rfl_ex align_cen">
+                <view class="updaata_icon"></view>
+                <view class="">换一批</view>
+            </view>
+        </view>
+    </view>
+    <block wx:for="{{[1,2,3,4]}}">
+        <view class="grid r_flex align_cen" bindtap="goPathDetail_Fn">
+            <view class="grid_l">
+                <image class="user_icon" mode="aspectFit" src="/images/user_icon.jpg" />
+            </view>
+            <view class="grid_m flex1">
+                <view class="name">老司机，带带你</view>
+                <view class="start">起点：刘家垭村</view>
+                <view class="end">终点：走马镇</view>
+            </view>
+            <view class="grid_r">
+                <view class="about rfl_ex align_cen">
+                    <image class="handle_icon" mode="aspectFit" src="/images/storage.png" />
+                    关注
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

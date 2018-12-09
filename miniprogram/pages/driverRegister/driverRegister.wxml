@@ -1,0 +1,66 @@
+<!-- 背景图 -->
+
+
+<view class="container l_flex align_cen">
+    <image class="login_bg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540277204067&di=05b8fbb7cf706ec126947a361ccbe72d&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016a07554970ce0000019ae9a9bba6.jpg"
+        mode="aspectFill" />
+
+    <view class="title">司机注册</view>
+    <view class="r_flex_ align_cen input_outbox">
+        <view class="left_title">姓名：</view>
+        <input value="{{username}}" class="isinput flex1" bindinput="writeUserName_Fn" placeholder="请输入用户名"
+            placeholder-class="isplaceholder" />
+    </view>
+    <view class="r_flex_ align_cen input_outbox">
+        <view class="left_title">手机：</view>
+        <input value="{{phone}}" type="number" class="isinput flex1" bindinput="writePhone_Fn" placeholder="请输入手机号码"
+            placeholder-class="isplaceholder" />
+    </view>
+    <view class="r_flex_ align_cen input_outbox">
+        <view class="left_title">类目：</view>
+        <radio-group class="flex1 r_flex_ align_cen">
+            <label class="radiobox r_flex align_cen">
+                <radio class="radio" color="orangered" value="{{}}" checked="{{item.checked}}" />载人
+            </label>
+            <label class="radiobox r_flex align_cen">
+                <radio class="radio" color="orangered" value="{{}}" checked="{{item.checked}}" />载物
+            </label>
+            <label class="radiobox r_flex align_cen">
+                <radio class="radio" color="orangered" value="{{}}" checked="{{item.checked}}" />专用
+            </label>
+        </radio-group>
+    </view>
+    <view class="r_flex_ align_cen input_outbox">
+        <view class="left_title">范围：</view>
+        <input value="{{}}" class="isinput flex1" bindinput="" placeholder="点击选择" disabled placeholder-class="isplaceholder" />
+    </view>
+    <view class="r_flex_ align_cen input_outbox">
+        <view class="left_title">路径：</view>
+        <input value="{{pathline}}" class="isinput flex1" bindinput="" placeholder="点击选择" disabled placeholder-class="isplaceholder" />
+    </view>
+    <view class="r_flex align_str input_outbox">
+        <view class="left_title">简介：</view>
+        <textarea value="{{textarea}}" class="istextarea flex1" bindinput="" placeholder="例：20年老司机，刚买的越野新车，真皮座椅，可带6人，开车贼稳，欢迎乘坐，妹子免费~~"
+            placeholder-class="isplaceholder" />
+    </view>
+    <view class="r_flex align_str input_outbox">
+        <view class="left_title">图片：</view>
+        <view class="r_flex flex1 wrap imgsbox">
+            <block wx:for="{{imgarr}}">
+                <view class="imgitembox">
+                    <icon type="cancel" size="25" class="clearicon" data-index="{{index}}" catch:tap="deleteImg_Fn"/>
+                    <image src="{{item}}" mode="aspectFill" class="imgitem"/>
+                </view>
+            </block>
+            <view wx:if="{{imgarr.length<9}}" class="addimg lfl_ex align_cen" bind:tap="addImg_Fn">
+                <view class="addlineicon"></view>
+                <view class="imgtext">图片</view>
+            </view>
+        </view>
+    </view>
+    <view class="login_btn" bind:tap="login_Fn">注册</view>
+</view>
+
+
+<import src='/template/public.wxml' />
+<template is="tem_smalert" data="{{...alertmessage}}" />

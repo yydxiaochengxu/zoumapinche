@@ -1,0 +1,38 @@
+<map id="map" class="map" longitude="110.42307" latitude="29.81736" scale="14" markers="{{markers}}" bindmarkertap="markertap"
+    bindtap="maptap_Fn" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width:750rpx; height:100vh;"
+    circles="{{circles}}">
+
+    <cover-view class="coverview" style="width:12rpx;height:12rpx;transform:scale(1);border:solid 1rpx red;background:none;"></cover-view>
+
+    <!-- <cover-view class="r_flex_">
+        <cover-view bindtap="loccationLatLng_fn" style="color:#ff5500;padding:20rpx 0;">记录中心点1</cover-view>
+        <cover-view bindtap="takeLoccation_Fn">记地名</cover-view>
+        <cover-view bindtap="takeLoccation2_fn" style="color:#ff5500;padding:20rpx 0;">划线2</cover-view>
+        <cover-view bindtap="backonce_Fn" style="color:#ff5500;padding:20rpx 0;">撤销3</cover-view>
+        <cover-view bindtap="takeOver_Fn" style="color:#ff5500;padding:20rpx 0;">完成4</cover-view>
+    </cover-view> -->
+
+    <cover-image class="loaction_path" src="/images/402导航(2).png" bindtap="polyline_Fn" />
+
+    <cover-view class="choose_location rfl_ex align_cen">
+        <cover-view class="choose_locationbtn rfl_ex align_cen mar_r50" bindtap="meLocation_Fn">
+            <cover-view class="choose_location_bg"></cover-view>
+            <cover-image class="loaction_iconimg" src="/images/定位.png" />
+            <cover-view class="choose_locationtext">查看我的位置</cover-view>
+        </cover-view>
+        <cover-view class="choose_locationbtn rfl_ex align_cen" bindtap="nearby_Fn">
+            <cover-view class="choose_location_bg"></cover-view>
+            <cover-image class="loaction_iconimg" src="/images/定位(1).png" />
+            <cover-view class="choose_locationtext">查看附近位置</cover-view>
+        </cover-view>
+    </cover-view>
+    
+    <cover-view hidden="{{hiddencoverview}}" class="coverview ringanimation"></cover-view>
+    <cover-view hidden="{{hiddencoverview}}" class="coverview ringanimation delay15"></cover-view>
+
+    <cover-view class="coverviewbox" hidden="{{hiddenmeLocation}}">
+        <cover-view class="coverview ringanimation"></cover-view>
+        <cover-view class="coverview ringanimation delay15"></cover-view>
+    </cover-view>
+
+</map>

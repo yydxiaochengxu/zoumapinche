@@ -1,0 +1,64 @@
+<view class="container">
+    <view class="header r_flex align_cen">
+        <image src="/images/user_icon.jpg" class="user_icon" />
+        <view class="flex1">
+            <view class="r_flex_">
+                <view class="username">司机：灯泡</view>
+                <!-- <view class="">15927661341</view> -->
+            </view>
+            <view class="abstract">简介：20年老司机，刚买的越野新车，真皮座椅，可带6人，开车贼稳，欢迎乘坐，妹子免费~~</view>
+            <view class="rflex_ align_cen">
+                <view class="about rfl_ex align_cen red">
+                    <image class="handle_icon" mode="aspectFit" src="/images/storage2.png" />
+                    关注
+                </view>
+                <view class="about rfl_ex align_cen green">
+                    <image class="handle_icon" mode="aspectFit" src="/images/share.png" />
+                    <view class="green">分享</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="drive_box rfl_ex align_cen">
+        <view class="flex1">
+            <view class="drive"><text class="green">起：</text>{{pathDetailArr[0]}}</view>
+            <view class="timed">8:30</view>
+        </view>
+        <image src="/images/cart.png" class="cart_icon" />
+        <view class="flex1">
+            <view class="drive"><text class="red">终：</text>{{pathDetailArr[pathDetailArr.length-1]}}</view>
+            <view class="timed">12:30</view>
+        </view>
+        <view class="decorate_box rfl_ex"></view>
+    </view>
+
+    <view class="pathbox">
+        <block wx:for="{{pathDetailArr}}">
+            <view class="list r_flex">
+                <view class="list_l">
+                    <view class="rang" bindtap="goMapPath_Fn">
+                        <icon class="pathicon" type="success" color="#939EF0" />
+                    </view>
+                    <view class="line" wx:if="{{index!==pathDetailArr.length-1}}"></view>
+                </view>
+                <view class="list_r">
+                    <view class="location_name">{{item}}</view>
+                    <view class="font_26">08:30:00</view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <view class="callbox" bindtap="callHe_Fn">
+        <view class="callicon_box">
+            <image src="/images/call.png" class="call_icon" />
+        </view>
+        联系他
+    </view>
+
+    <view class="remarks">
+        备注：以上数据仅供参考
+    </view>
+
+</view>

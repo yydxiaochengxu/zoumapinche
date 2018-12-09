@@ -1,0 +1,28 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/driverRegister/driverRegister",
+    "pages/pathDetail/pathDetail",
+    "pages/pathList/pathList",
+    "pages/mapPath/mapPath",
+
+    "pages/index/index",
+    "pages/me/me",
+    "pages/driverList/driverList",
+  
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "走马拼车",
+    "navigationBarTextStyle": "black"
+  }
+}

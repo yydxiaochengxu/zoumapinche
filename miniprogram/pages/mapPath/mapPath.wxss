@@ -1,0 +1,28 @@
+/* pages/mapPath/mapPath.wxss */
+.loaction_path{position:absolute;bottom:240rpx;width:60rpx;height:60rpx;padding:20rpx;left:0;}
+.choose_location{position:absolute;right:0;bottom:10rpx;z-index:4;height:80rpx;line-height: 80rpx;width:inherit;text-align:center;}
+.loaction_iconimg{width:40rpx;height:40rpx;margin-right:20rpx;}
+.choose_locationbtn{position:relative;height:inherit;width:300rpx;border-radius:8rpx;}
+.choose_location_bg{position:absolute;width:inherit;height:inherit;top:0;left:0;background:#000000;z-index:-2;opacity:0.56;}
+.choose_locationtext{font-size:28rpx;color:#ffffff;}
+.mar_r50{margin-right:50rpx;}
+.map{position:relative;}
+.coverviewbox{width:inherit;height:inherit;position:absolute;top:0;left:0;}
+.coverview{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;width:240rpx;height:240rpx;border-radius:50%;background:#0ff;transform:scale(0.02);opacity:1;}
+.delay15{
+    animation-delay: 1.5s;
+}
+.ringanimation{
+    animation-name: changebig;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+@keyframes changebig{
+    0%{
+        transform:scale(0.02);opacity:1;
+    }
+    100%{
+        transform:scale(1);opacity:0.2;
+    }
+}
