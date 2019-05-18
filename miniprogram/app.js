@@ -18,6 +18,12 @@ App({
             this.updataFile();//更新小程序
         }
     },
+    checkLogin:function(){
+        console.log('添加内容')
+        console.log('删除内容')
+        console.log('修改内容')
+        console.log('查看内容')
+    },
     updataFile: function () {
         const updateManager = wx.getUpdateManager()
         updateManager.onCheckForUpdate(function (res) {
