@@ -23,6 +23,7 @@ App({
         console.log('删除内容')
         console.log('修改内容')
         console.log('查看内容')
+        console.log('add')
     },
     updataFile: function () {
         const updateManager = wx.getUpdateManager()
