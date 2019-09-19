@@ -9,7 +9,7 @@ function aa() {
             (function () {
                 console.log('我是div1');
                 setTimeout(() => {
-                    alert('div1')
+                    console.warn('div1')
                 }, 1000)
             }())
     }
