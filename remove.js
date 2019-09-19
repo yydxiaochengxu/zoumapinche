@@ -8,3 +8,6 @@ function aa(){
         console.log('新加de名函数')
     }
 }
+function loop(){
+    console.log('loop')
+}
