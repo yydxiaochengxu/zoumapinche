@@ -15,5 +15,6 @@ function aa() {
     }
 }
 function loop(){
+    alert('添加的函数')
     console.log('loop')
 }
