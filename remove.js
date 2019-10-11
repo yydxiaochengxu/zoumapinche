@@ -1,3 +1,4 @@
+console.log('remove添加函数')
 function aa() {
     function add() {
         console.log('master冲突函数')
