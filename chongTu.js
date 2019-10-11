@@ -1,4 +1,5 @@
 console.log('冲突添加函数')
+console.log('tianjiayixiehanshu')
 function aa() {
     function add() {
         console.log('master冲突函数')
