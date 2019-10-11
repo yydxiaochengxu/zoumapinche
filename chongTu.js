@@ -16,6 +16,7 @@ function aa() {
         }())
     }
 }
+alert('添加了一些操作')
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;
