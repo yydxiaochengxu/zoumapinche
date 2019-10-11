@@ -4,7 +4,6 @@ function aa() {
     }
     add()
     return function () {
-<<<<<<< HEAD
         alert('新加dev匿名函数111');
         console.log('新加dev匿名tianjia函数');
         (function () {
@@ -52,20 +51,6 @@ let reducer = (state = {}, action) => {
 let store = createStore(reducer)
 module.exports = {
     store
-=======
-        console.log('新加dev匿名函数111')
-        console.log('新加dev匿名tianjia函数')
-            (function () {
-                console.log('我是div1');
-                setTimeout(() => {
-                    console.warn('div1')
-                }, 1000)
-            }())
-    }
-}
-function loop(){
-    console.log('loop')
->>>>>>> origin/master
 }
 
 
