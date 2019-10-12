@@ -1,5 +1,3 @@
-console.log('冲突添加函数')
-console.log('tianjiayixiehanshu')
 function aa() {
     function add() {
         console.log('master冲突函数')
@@ -16,7 +14,7 @@ function aa() {
         }())
     }
 }
-alert('添加了一些操作')
+alert('改变')
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;
