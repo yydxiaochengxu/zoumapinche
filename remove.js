@@ -13,6 +13,7 @@ function aa() {
         }())
     }
 }
+alert('添加一些remove函数')
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;
