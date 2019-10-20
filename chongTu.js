@@ -106,7 +106,7 @@ function aalocation() {
         alert('新加dev匿名函数');
         console.log('新加dev匿名tianjia函数');
         (function () {
-            console.log('我是div1');
+            alert('添加含描述')
             setTimeout(() => {
                 console.log('div1')
             }, 1000)

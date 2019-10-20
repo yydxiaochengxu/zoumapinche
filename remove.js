@@ -1,19 +1,3 @@
-
-function aa() {
-    function add() {
-        console.log('master冲突函数')
-    }
-    add()
-    return function () {
-        galert('新加dev匿名tianjia函数');
-        (function () {
-            console.log('立马xiugai执行');
-            setTimeout(() => {
-                console.log('redux原理篇')
-            }, 1000)
-        }())
-    }
-}
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;
