@@ -1,20 +1,3 @@
-function aa() {
-    function add() {
-        console.log('master冲突函数')
-    }
-    add()
-    return function () {
-        alert('新加dev匿名函数111');
-        console.log('新加dev匿名tianjia函数');
-        (function () {
-            console.log('我是div1');
-            setTimeout(() => {
-                console.log('div1')
-            }, 1000)
-        }())
-    }
-}
-alert('改变')
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;
@@ -114,7 +97,22 @@ module.exports = {
 
 
 
-var bb = '添加全局变量';
+
+
+
+// 本地：
+function aalocation() {
+    return function () {
+        alert('新加dev匿名函数');
+        console.log('新加dev匿名tianjia函数');
+        (function () {
+            console.log('我是div1');
+            setTimeout(() => {
+                console.log('div1')
+            }, 1000)
+        }())
+    }
+}
 // 远程：
 function aa() {
     function add() {
