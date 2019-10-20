@@ -5,9 +5,9 @@ function aa() {
     }
     add()
     return function () {
-        console.log('新加dev匿名tianjia函数');
+        galert('新加dev匿名tianjia函数');
         (function () {
-            console.log('立马执行');
+            console.log('立马xiugai执行');
             setTimeout(() => {
                 console.log('redux原理篇')
             }, 1000)
