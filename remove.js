@@ -1,3 +1,4 @@
+
 function aa() {
     function add() {
         console.log('master冲突函数')
@@ -6,14 +7,13 @@ function aa() {
     return function () {
         console.log('新加dev匿名tianjia函数');
         (function () {
-            console.log('我是div1');
+            console.log('立马执行');
             setTimeout(() => {
-                console.log('div1')
+                console.log('redux原理篇')
             }, 1000)
         }())
     }
 }
-alert('添加一些remove函数')
 function createStore(reducer) {
     let store, observer = {};
     let gerState = () => store;

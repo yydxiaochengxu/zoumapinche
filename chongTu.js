@@ -58,10 +58,10 @@ module.exports = {
 
 // 本地：
 function aa() {
-    function add() {
-        console.log('master冲突函数')
+    function add(arg) {
+        console.log(arg)
     }
-    add()
+    add('skjlahfjik')
     return function () {
         alert('新加dev匿名函数111');
         console.log('新加dev匿名tianjia函数');
@@ -114,7 +114,7 @@ module.exports = {
 
 
 
-
+var bb = '添加全局变量';
 // 远程：
 function aa() {
     function add() {
@@ -132,6 +132,6 @@ function aa() {
             }())
     }
 }
-function loop(){
+function loop() {
     console.log('loop')
 }
