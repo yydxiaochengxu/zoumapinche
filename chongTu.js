@@ -42,11 +42,11 @@ module.exports = {
 // 本地：
 function aa() {
     function add(arg) {
+        console.log('添加一句，减少一句')
         console.log(arg)
     }
-    add('skjlahfjik')
     return function () {
-        alert('新加dev匿名函数111');
+        alert('修改匿名函数111');
         console.log('新加dev匿名tianjia函数');
         (function () {
             console.log('我是div1');
